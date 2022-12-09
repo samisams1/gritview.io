@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: gritview-frontend
+  labels:
+    type: gritview-frontend
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      protocol: TCP
+      name: http
+      targetPort: 80
+  selector:
+    app: gritview-frontend

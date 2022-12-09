@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: gritview-frontend
+  labels:
+    type: endpoints-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gritview-frontend
+  template:
+    metadata:
+      labels:
+        app: gritview-frontend
+    spec:
+      containers:
+        - name: gritview-frontend
+          image: gcr.io/PROJECT_ID/IMAGE:TAG
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

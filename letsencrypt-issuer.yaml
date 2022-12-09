@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod-frontend
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: "gritview.io@gmail.com"
+    privateKeySecretRef:
+      name: letsencrypt-prod-frontend
+    solvers:
+      - http01:
+          ingress:
+            class: nginx

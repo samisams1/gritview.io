@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gritview-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    ingress.kubernetes.io/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-prod-frontend
+  labels:
+    type: endpoints-app
+spec:
+  tls:
+    - hosts:
+        - gritview.io
+      secretName: gritview-frontend-certificate
+    - hosts:
+        - "api.gritview.io"
+      secretName: gritview-backend-certificate
+  rules:
+    - host: gritview.io
+      http:
+        paths:
+          - backend:
+              serviceName: gritview-frontend
+              servicePort: 80
+    - host: api.gritview.io
+      http:
+        paths:
+          - backend:
+              serviceName: gritview-backend
+              servicePort: 80

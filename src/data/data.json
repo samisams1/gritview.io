@@ -1,0 +1,20 @@
+{
+  "Header": {
+    "title": "Gritview.io",
+    "paragraph": "Guide to assist you in making informed decisions on courses you plan to take at the University of Maryland, Baltimore County (UMBC)"
+  },
+  "About": {
+    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Why": [
+      "Lorem ipsum dolor",
+      "Tempor incididunt",
+      "Lorem ipsum dolor",
+      "Incididunt ut labore"
+    ]
+  },
+  "Footer": {
+    "preliminary": "Gritview is a platform built to assist students and faculty retrieve data regarding course grades, course evaluations, and professors @ UMBC.",
+    "ground": "Grade and course evaluation data provided on this platform is directly obtained from the University of Maryland, Baltimore County.",
+    "company": "2021 Gritview.io"
+  }
+}
